@@ -1,8 +1,14 @@
-import chess
+import sys
+import game
 
-board = chess.Board()
-fen = board.fen()
 
-f = open("chess", "w")
-f.write(fen)
-f.close()
+def main():
+    args = len(sys.argv)
+    move = None
+    if args > 1:
+        move = sys.argv[1]
+    game.game(move)
+
+
+if __name__ == "__main__":
+    main()

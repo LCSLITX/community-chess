@@ -1,2 +1,4 @@
 **/*venv
 **/*chess
+**/*__pycache__
+**/*.idea
