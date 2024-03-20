@@ -1,4 +1,5 @@
 **/*venv
-**/*chess
+**/*fen
+**/*chess.md
 **/*__pycache__
 **/*.idea

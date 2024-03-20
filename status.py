@@ -8,7 +8,7 @@ def save_game(fen: str) -> None:
     :return: None
     """
     if utils.validate_fen(fen):
-        f = open("chess", "w")
+        f = open("fen", "w")
         f.write(fen)
         f.close()
 
@@ -19,8 +19,10 @@ def load_game() -> str:
     :rtype: str
     """
     try:
-        f = open("chess", "r")
+        f = open("fen", "r")
         fen = f.read()
+        if len(fen) == 0:
+            raise FileNotFoundError()
     except FileNotFoundError:
         fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
     else:
